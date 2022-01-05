@@ -13,9 +13,9 @@ public class HelloController {
 	public String index() {
 		return "<html><body><p><b>Java Spring Boot Run #"+counter++
 		+"</b>\n\n"
-		+"<input type=\"button\" style=\"background-color:green\" onclick=\"location.href=\'/\'\" value=\"Next\"/>"
+		+"<input type=\"button\" style=\"background-color:LightGreen\" onclick=\"location.href=\'/\'\" value=\"Next\"/>"
 		+"<p><b>"+new Date().toString()+"</b></body></html>\n\n"
-		+"<p><input type=\"button\" style=\"background-color:red\" onclick=\"location.href=\'/reset\'\" value=\"Reset Count\"/>";
+		+"<p><input type=\"button\" style=\"background-color:#ff6347\" onclick=\"location.href=\'/reset\'\" value=\"Reset\"/>";
 	}
 
 	@GetMapping("/reset")
