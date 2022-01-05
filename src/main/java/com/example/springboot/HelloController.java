@@ -11,7 +11,17 @@ public class HelloController {
 
 	@GetMapping("/")
 	public String index() {
-		return "<html><body><p><b>Java Spring Boot Run #"+counter+++"</b><p><b>"+new Date().toString()+"</b></body></html>";
+		return "<html><body><p><b>Java Spring Boot Run #"+counter++
+		+"</b>\n\n"
+		+"<input type=\"button\" style=\"background-color:green\" onclick=\"location.href=\'/\'\" value=\"Next\"/>"
+		+"<p><b>"+new Date().toString()+"</b></body></html>\n\n"
+		+"<p><input type=\"button\" style=\"background-color:red\" onclick=\"location.href=\'/reset\'\" value=\"Reset Count\"/>";
+	}
+
+	@GetMapping("/reset")
+	public String reset() {
+		counter = 0; 
+		return index();
 	}
 
 }
