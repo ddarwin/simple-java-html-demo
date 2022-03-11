@@ -12,7 +12,7 @@ public class HelloController {
 	@GetMapping("/")
 	public String index() {
 		try {
-        Thread.sleep((long)(Math.random() * 1000));
+        	Thread.sleep((long)(Math.random() * 1000));
 		} catch(Exception ie) {}
 		return "<html><body>"
 		+"<p><b>Java Spring Boot Run #"+counter+++"</b>"
